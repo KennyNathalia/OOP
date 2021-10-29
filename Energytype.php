@@ -1,9 +1,6 @@
 <?php
-	class Energytype extends Pokemon{
-
-		public function __construct($name, $energytype){
-			
-		    
-		}
+	class Energytype{
+		public $type;
+		public $value;
 	}
 ?>
