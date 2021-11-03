@@ -7,6 +7,7 @@
 		public $attacks;
 		public $weakness;
 		public $resistance;
+		public $attack;
 
 		public function __construct($name, $energytype, $hitpoints, $attacks){
 	        $this->name = $name;
