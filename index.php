@@ -1,11 +1,14 @@
 <?php
 	require "Pokemon.php";
 	require "Pikachu.php";
+	require "Charmeleon.php";
 
-	$pikachu = new Pikachu();
+	$pikachu = new Pikachu("Pikachu");
+	$charmeleon = new Charmeleon("Charmeleon");
 
-	$charmeleon = new Pokemon('Charmeleon', 'Fire', '60', 'Head Butt, Flare');
+	$pikachu->name();
+	$charmeleon->name();
 
 	print_r('<pre>'. $pikachu . '</pre>');
-	// print_r('<pre>'. $charmeleon . '</pre>');
+ 	print_r('<pre>'. $charmeleon . '</pre>');
 ?>
