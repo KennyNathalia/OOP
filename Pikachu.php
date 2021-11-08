@@ -6,7 +6,7 @@ class Pikachu extends Pokemon {
 		$energytype = 'Lightning';
 		$hitpoints = 60;
 		$health = 60;
-		//$attacks = array("Electric Ring", "Pika Punch");
+		$attacks = array("Electric Ring", "Pika Punch");
 		$weakness = "fire";
 		$resistance = "fighting";
             parent::__construct($name, $energytype, $hitpoints, $health, $attacks, $weakness, $resistance);

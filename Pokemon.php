@@ -1,4 +1,8 @@
 <?php
+	require "Weakness.php";
+	require "Resistance.php";
+	require "Attack.php";
+
 	class Pokemon{
 		public $name;
 		public $energytype;
@@ -15,9 +19,9 @@
         $this->energytype = $energytype;
         $this->hitpoints = $hitpoints;
         $this->health = $health;
-        $this->$attacks = $attacks;
+        $this->attacks = $attacks;
         $this->weakness = $weakness;
-        $this->$resistance = $resistance;
+        $this->resistance = $resistance;
     }
 
 	public function __toString() {
@@ -26,7 +30,14 @@
 
 	public function name()
     {
-        echo '<h2>' . $this->name . '</h2>';
+        //echo '<h2>' . $this->name . '</h2>';
+        return $this->name;
     }
+
+    public function stats(){
+    	return
+    	"Name: ". $this->name()." ";
+    }
+
 }
 ?>
