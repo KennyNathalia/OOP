@@ -28,15 +28,33 @@
 	        return json_encode($this);
 	}
 
-	public function name()
-    {
+	public function name(){
         //echo '<h2>' . $this->name . '</h2>';
         return $this->name;
     }
 
+    public function type(){
+    	return $this->energytype;
+    }
+
+    public function hitpoints(){
+    	return $this->hitpoints;
+    }
+
+    public function attacks(){
+    	return $this->attacks;
+    }
+
+    // public function weakness(){
+    	
+    // }
+
     public function stats(){
     	return
-    	"Name: ". $this->name()." ";
+    	"Name: ". $this->name(). "<br>".
+    	"Energytype: ". $this->type()."<br>".
+    	"Health (hitpoints): ". $this->hitpoints()."<br>".
+    	"Attacks: ". $this->attacks(). "";
     }
 
 }
