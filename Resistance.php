@@ -10,11 +10,11 @@
 			}
 
 			public function getResistanceName(){
-				return $resistanceName;
+				return $this->resistanceName;
 			}
 
 			public function getResistanceMultiplier(){
-				return $resistanceMultiplier;
+				return $this->resistanceMultiplier;
 			}
 		}
 ?>

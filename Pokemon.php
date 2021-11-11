@@ -41,20 +41,34 @@
     	return $this->hitpoints;
     }
 
-    public function attacks(){
+    public function attack(){
     	return $this->attacks;
     }
 
-    // public function weakness(){
-    	
+    // public function attack1(){
+    // 	return $this->attacks[0];
     // }
+
+    // public function attack2(){
+    // 	return $this->attacks[1];
+    // }
+
+    public function getWeakness(){
+    	return $this->weakness;
+    }
+
+    public function getResistance(){
+    	return $this->resistance;
+    }
 
     public function stats(){
     	return
     	"Name: ". $this->name(). "<br>".
     	"Energytype: ". $this->type()."<br>".
     	"Health (hitpoints): ". $this->hitpoints()."<br>".
-    	"Attacks: ". $this->attacks(). "";
+    	"Attacks: ". $this->attack()[0]->getAttackName().", ".$this->attack()[0]->getAttackDamage(). " and ". $this->attack()[1]->getAttackName().", ".$this->attack()[0]->getAttackDamage()."<br>".
+    	"Weakness: ". $this->getWeakness()->getWeaknessName(). ", ". $this->getWeakness()->getWeaknessMultiplier()."<br>".
+    	"Resistance: ". $this->getResistance()->getResistanceName(). ", ". $this->getResistance()->getResistanceMultiplier();
     }
 
 }

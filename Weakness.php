@@ -10,11 +10,12 @@
 		}
 
 		public function getWeaknessName(){
-			return $weaknessName;
+			return $this->weaknessName;
 		}
 
 		public function getWeaknessMultiplier(){
-			return $weaknessMultiplier;
+			return $this->weaknessMultiplier;
 		}
+
 	}
 ?>

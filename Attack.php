@@ -10,11 +10,12 @@
 			}
 
 			public function getAttackName(){
-				return $attackName;
+				return $this->attackName;
 			}
 
 			public function getAttackDamage(){
-				return $attackDamage;
+				return $this->attackDamage;
 			}
+
 		}
 ?>
