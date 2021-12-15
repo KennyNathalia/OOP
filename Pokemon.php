@@ -4,6 +4,7 @@
 	require "Attack.php";
 
 	class Pokemon{
+		//variables
 		public $name;
 		public $energytype;
 		public $hitpoints;
@@ -35,6 +36,10 @@
 
     public function type(){
     	return $this->energytype;
+    }
+
+    public function health(){
+        return $this->health;
     }
 
     public function hitpoints(){
@@ -70,6 +75,15 @@
     	"Weakness: ". $this->getWeakness()->getWeaknessName(). ", ". $this->getWeakness()->getWeaknessMultiplier()."<br>".
     	"Resistance: ". $this->getResistance()->getResistanceName(). ", ". $this->getResistance()->getResistanceMultiplier();
     }
+
+    // public function getBattle(){
+    // 	return
+
+    // }
+
+    // public function getPopulation(){
+    	
+    // }
 
 }
 ?>
