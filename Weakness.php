@@ -2,10 +2,12 @@
 	class Weakness{
 		public $weaknessName;
 		public $weaknessMultiplier;
+		private $weaknessType;
 
-		public function __construct($weakness, $multiplier){
+		public function __construct($weakness, $multiplier, $weaknessEnergyType){
 			$this->weaknessName = $weakness;
 			$this->weaknessMultiplier = $multiplier;
+			$this->weaknessType = $weaknessEnergyType;
 
 		}
 
@@ -15,6 +17,10 @@
 
 		public function getWeaknessMultiplier(){
 			return $this->weaknessMultiplier;
+		}
+
+		public function getWeaknesstype(){
+			return $this->energyType;
 		}
 
 	}
