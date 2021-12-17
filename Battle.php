@@ -1,7 +1,10 @@
 <?php
+require_once "Pokemon.php";
 
 class Battle{
-	public function __construct(){
+	public $pokeBattle;
+
+	public function PokeBattle(){
 		
 	}
 }

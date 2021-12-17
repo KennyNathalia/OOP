@@ -4,18 +4,17 @@
 		public $attackDamage;
 
 		public function __construct($attack, $damage){
-				$this->attackName = $attack;
-				$this->attackDamage = $damage;
-
-			}
-
-			public function getAttackName(){
-				return $this->attackName;
-			}
-
-			public function getAttackDamage(){
-				return $this->attackDamage;
-			}
-
+			$this->attackName = $attack;
+			$this->attackDamage = $damage;
 		}
+
+		public function getAttackName(){
+			return $this->attackName;
+		}
+
+		public function getAttackDamage(){
+			return $this->attackDamage;
+		}
+
+	}
 ?>
