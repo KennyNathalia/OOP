@@ -1,7 +1,7 @@
 <?php
 	class Attack{
-		public $attackName;
-		public $attackDamage;
+		private $attackName;
+		private $attackDamage;
 
 		public function __construct($attack, $damage){
 			$this->attackName = $attack;

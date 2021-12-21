@@ -5,13 +5,13 @@
 
 	class Pokemon{
 		//variables
-		public $name;
-		public $energytype;
-		public $hitpoints;
-		public $health;
-		public $attacks;
+		private $name;
+		private $energytype;
+		private $hitpoints;
+		private $health;
+		private $attacks;
 		private $weakness;
-		public $resistance;
+		private $resistance;
         private static $population = 0;
 
 
@@ -63,26 +63,35 @@
         $attack = $this->getAttack()[$attackIndex];
         $damage = $attack->getAttackDamage();
         if($this->energytype == $opponent->getWeakness()->getWeaknessType()){
-            $damage = $damage * $opponent->getWeakness()->getWeaknessMultiplier();
+            return $damage = $damage * $opponent->getWeakness()->getWeaknessMultiplier();
         }
         if($this->energytype == $opponent->getResistance()->getResistanceType()){
-            $damage = $damage - $opponent->getResistance()->getResistanceMultiplier();
+            return $damage = $damage - $opponent->getResistance()->getResistanceMultiplier();
         }
         $opponent->takeDamage($damage);
     }
 
     public function takeDamage($damage){
-        $this->health = $this->health - $damage;
+        $this->health = $this->health - $damage;      
+        if ($this->health <= 0) {
+            $this->health = 0;
+            self::$population--;
+        }
+        return $this->health;
     }
+
+
 
 
     public function stats(){
     	return
     	"Name: ". $this->name(). "<br>".
-    	"Energytype: ". $this->type()->getEnergyTypeName()."<br>".
+    	"Energytype: ". $this->type()."<br>".
     	"Health (hitpoints): ". $this->hitpoints()."<br>".
     	"Attacks: ". $this->getAttack()[0]->getAttackName().", ".$this->getAttack()[0]->getAttackDamage(). " and ". $this->getAttack()[1]->getAttackName().", ".$this->getAttack()[0]->getAttackDamage()."<br>".
+
     	"Weakness: ". $this->getWeakness()->getWeaknessName(). ", ". $this->getWeakness()->getWeaknessMultiplier(). ", ". $this->getWeakness()->getWeaknessType()."<br>".
+
     	"Resistance: ". $this->getResistance()->getResistanceName(). ", ". $this->getResistance()->getResistanceMultiplier(). ", ". $this->getResistance()->getResistanceType();
     }
 
@@ -93,17 +102,3 @@
 }
 ?>
 
-<!-- 
-public function SetHealth($newHealth){
-        if($newHealth < 0){
-            $this->health = 0;
-        }else{
-           $this->health = $newHealth;
-        }
-
-        if($newHealth <= 0){
-            self::$population--;
-        }
-
-    }
-     -->
