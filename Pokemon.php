@@ -86,9 +86,9 @@
     	"Health (hitpoints): ". $this->getHitpoints()."<br>".
     	"Attacks: ". $this->getAttack()[0]->getAttackName().", ".$this->getAttack()[0]->getAttackDamage(). " and ". $this->getAttack()[1]->getAttackName().", ".$this->getAttack()[0]->getAttackDamage()."<br>".
 
-    	"Weakness: ". $this->getWeakness()->getWeaknessName(). ", ". $this->getWeakness()->getWeaknessMultiplier(). ", ". $this->getWeakness()->getWeaknessType()."<br>".
+    	"Weakness: ". $this->getWeakness()->getWeaknessType(). ", ". $this->getWeakness()->getWeaknessMultiplier()."<br>".
 
-    	"Resistance: ". $this->getResistance()->getResistanceName(). ", ". $this->getResistance()->getResistanceMultiplier(). ", ". $this->getResistance()->getResistanceType();
+    	"Resistance: ". $this->getResistance()->getResistanceType(). ", ". $this->getResistance()->getResistanceMultiplier();
     }
 
     public static function getPopulation(){
