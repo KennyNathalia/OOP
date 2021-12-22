@@ -24,15 +24,15 @@
  	//Pokebattle text
  	
  	//pikachu attacks charmeleon
- 	print_r($pikachu->name()." attacks ". $charmeleon->name()." with ". $pikachu->getAttack()[1]->getAttackName()."!". "<br>");
+ 	print_r($pikachu->getName()." attacks ". $charmeleon->getName()." with ". $pikachu->getAttack()[1]->getAttackName()."!". "<br>");
  	print_r("It did ". $pikachu->attack($charmeleon, 1)." damage!". "<br>");
- 	print_r($charmeleon->name(). " now has ". $charmeleon->takeDamage($pikachu->attack($charmeleon, 1))." HP!". "<br>"."<br>");
+ 	print_r($charmeleon->getName(). " now has ". $charmeleon->takeDamage($pikachu->attack($charmeleon, 1))." HP!". "<br>"."<br>");
 
 
 	//charmeleon attacks pikachu
- 	print_r($charmeleon->name()." attacks ". $pikachu->name()." with ". $charmeleon->getAttack()[1]->getAttackName()."!". "<br>");
+ 	print_r($charmeleon->getName()." attacks ". $pikachu->getName()." with ". $charmeleon->getAttack()[1]->getAttackName()."!". "<br>");
  	print_r("It did ". $charmeleon->attack($pikachu, 1)." damage!". "<br>");
- 	print_r($pikachu->name(). " now has " .$pikachu->takeDamage($charmeleon->attack($pikachu, 1))." HP!". "<br>");
+ 	print_r($pikachu->getName(). " now has " .$pikachu->takeDamage($charmeleon->attack($pikachu, 1))." HP!". "<br>");
 
  	print_r("There are ". Pokemon::getPopulation(). " Pokemon alive");
 

@@ -31,19 +31,15 @@
 	   return json_encode($this);
 	}
 
-	public function name(){
+	public function getName(){
         return $this->name;
     }
 
-    public function type(){
+    public function getType(){
     	return $this->energytype;
     }
 
-    public function health(){
-        return $this->health;
-    }
-
-    public function hitpoints(){
+    public function getHitpoints(){
     	return $this->hitpoints;
     }
 
@@ -85,9 +81,9 @@
 
     public function stats(){
     	return
-    	"Name: ". $this->name(). "<br>".
-    	"Energytype: ". $this->type()."<br>".
-    	"Health (hitpoints): ". $this->hitpoints()."<br>".
+    	"Name: ". $this->getName(). "<br>".
+    	"Energytype: ". $this->getType()."<br>".
+    	"Health (hitpoints): ". $this->getHitpoints()."<br>".
     	"Attacks: ". $this->getAttack()[0]->getAttackName().", ".$this->getAttack()[0]->getAttackDamage(). " and ". $this->getAttack()[1]->getAttackName().", ".$this->getAttack()[0]->getAttackDamage()."<br>".
 
     	"Weakness: ". $this->getWeakness()->getWeaknessName(). ", ". $this->getWeakness()->getWeaknessMultiplier(). ", ". $this->getWeakness()->getWeaknessType()."<br>".
