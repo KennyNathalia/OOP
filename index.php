@@ -10,12 +10,12 @@
 	$fightingType = new Energytype("Fighting");
 
 	$pikachu = new Pikachu("Pikachu", $lightningType->getEnergyTypeName(), 60, 60, [new Attack("Pika Punch", 20), new Attack("Electric Ring", 50)], 
-		new Weakness($fireType->getEnergyTypeName(), 1.5, $fireType->getEnergyTypeName()), 
-		new Resistance($fightingType->getEnergyTypeName(), 20, $fightingType->getEnergyTypeName()));
+		new Weakness(1.5, $fireType->getEnergyTypeName()), 
+		new Resistance(20, $fightingType->getEnergyTypeName()));
 
 	$charmeleon = new Charmeleon("Charmeleon", $fireType->getEnergyTypeName(), 60, 60, [new Attack("Head Butt", 10), new Attack("Flare", 30)], 
-		new Weakness($waterType->getEnergyTypeName(), 2, $waterType->getEnergyTypeName()), 
-		new Resistance($lightningType->getEnergyTypeName(), 10, $lightningType->getEnergyTypeName()));
+		new Weakness(2, $waterType->getEnergyTypeName()), 
+		new Resistance(10, $lightningType->getEnergyTypeName()));
 
 	print_r('<pre>'. $pikachu->stats() . '</pre>');
  	print_r('<pre>'. $charmeleon->stats() . '</pre>');

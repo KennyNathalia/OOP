@@ -1,17 +1,11 @@
 <?php
 	class Resistance{
-		private $resistanceName;
 		private $resistanceMultiplier;
 		private $resistanceType;
 
-		public function __construct($resistance, $multiplier, $resistanceEnergyType){
-			$this->resistanceName = $resistance;
+		public function __construct($multiplier, $resistanceEnergyType){
 			$this->resistanceMultiplier = $multiplier;
 			$this->resistanceType = $resistanceEnergyType;
-		}
-
-		public function getResistanceName(){
-			return $this->resistanceName;
 		}
 
 		public function getResistanceMultiplier(){
